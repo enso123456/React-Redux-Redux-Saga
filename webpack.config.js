@@ -11,9 +11,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['react', 'es2015', 'stage-1']
+          presets: ['env', 'react']
         }
-      }
+      },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
     ]
   },
   resolve: {
